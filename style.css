@@ -4,6 +4,10 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
+a {
+    color: #FF4C29;
+    text-decoration: none;
+}
 
 body {
     background-color: #1F2933;
@@ -27,7 +31,7 @@ textarea, input {
     color: #fff;
     border: none;
     padding: 0.5em;
-    max-width: fit-content;
+    max-width: 75%;
     border-radius: 4px;
     background: linear-gradient(180deg, #1b232b, #182027);
     box-shadow: -0.2px 0.2px 0.2px #161c22, 0.2px 0.2px 0.2px #1b232b;
@@ -173,14 +177,24 @@ hr {
     /* box-shadow: -2px 2px 4px #161c22, 2px 2px 8px #1b232b; */
 }
 
+#TID-table {
+    margin: 0 auto;
+}
 .tids {
+    margin: auto;
+    padding: 1em;
     text-align: center;
+    border: solid 2px #000;
 }
 .TID-header > tr > th {
     width: 200px;
+    padding: 1em;
 }
 .TID-input {
     min-width: 400px;
+}
+.TID-intern-name {
+    text-align: left;
 }
 #bottom-button {
     display: block;

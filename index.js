@@ -111,9 +111,9 @@ function todayDate() {  //return a string of current date in DD/MM/YYYY Format
 
 function getTransactionIDs() {  //Display fields to enter payment transaction IDs and input the values
     divSwap(2);
-    let container = "<p>Enter the Transaction numbers and bonus (optional) of the interns whose stubs should be generated</p><table><thead class='TID-header'><tr><th>Intern Name</th><th>Transaction #</th> <th>Bonus</th></tr></thead><tbody>";
+    let container = "<p>Enter the Transaction numbers and bonus (optional) of the interns whose stubs should be generated</p><table id='TID-table'><thead class='TID-header'><tr><th>Intern Name</th><th>Transaction #</th> <th>Bonus</th></tr></thead><tbody>";
     for (let i = 0; i < internNamesHolder.length; ++i) {
-        container += `<tr><td style="max-width: fit-content;">${internNamesHolder[i]}:</td><td><input type="number" id="intern-TID-${i}" max="999999999999999999"></td><td><input type="number" id="intern-Bonus-${i}"></td></tr>`;
+        container += `<tr><td class="TID-intern-name">${internNamesHolder[i]}:</td><td><input type="number" id="intern-TID-${i}" max="999999999999999999"></td><td><input type="number" id="intern-Bonus-${i}"></td></tr>`;
     }
     container += '</tbody></table><button id="intern-TID-Submit">Submit</button>';
     document.querySelector(".tids").innerHTML = container;
@@ -260,7 +260,7 @@ function stubGenerator(tableContent, num) { //Generate table for displaying stub
         <tr>
             <td class="hh-details" colspan="2" style="vertical-align: top;">
                 <h4>Hophead Media</h4>Building No: 109/3 <br> Poothole - Aranattukara Road <br> Thrissur | 680004 <br>
-                <img id="email-icon" src="Assets/Images/email.png" alt="email-icon">business@hophead.in
+                <img id="email-icon" src="/Assets/Images/email.png" alt="email-icon">business@hophead.in
             </td>
             <td class="payment-details">
                 <h4>PAYMENT DETAILS: </h4>
