@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fee Details MK III</title>
+</head>
+
+<link rel="stylesheet" href="style.css">
+<link href='https://fonts.googleapis.com/css?family=Sanchez' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+
+<body>
+    <div class="input-form">
+        <form>
+            <label for="month">Choose month:</label>
+            <select name="month" id="month">
+                <option value="January">January</option>
+                <option value="February">February</option>
+                <option value="March">March</option>
+                <option value="April">April</option>
+                <option value="May">May</option>
+                <option value="June">June</option>
+                <option value="July">July</option>
+                <option value="August">August</option>
+                <option value="September">September</option>
+                <option value="October">October</option>
+                <option value="November">November</option>
+                <option value="December">December</option>
+            </select>
+            <label for="year">Choose year:</label>
+            <select name="year" id="year">
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
+            </select>
+            <label for="token">Enter Notion token:</label>
+            <input type="text" id="notion_token" size="50">
+        </form>
+        <button onclick="APIGenerate()">Submit</button>
+
+
+        <div class="api-request">
+            <p>Here is the Raw API input text:</p>
+            <textarea id="cURL" rows="10" cols="100" placeholder="---API code will be displayed here---"
+                readonly="true"></textarea>
+        </div>
+
+
+        <div class="api-result">
+            <p>Execute the code above in postman and paste the result (in Raw format) below: </p>
+            <textarea name="apigen" id="apiResult" rows="10" cols="100"
+                placeholder='--Paste Raw API result here--'></textarea>
+            <br>
+            <button class="btn" id="api_cleanup" onclick="APICleanup()">Import</button>
+        </div>
+    </div>
+
+    <div class="details-display" style="display: none">
+        <h1 class="heading">Hophead Stub</h1>
+        <p>what would you like to generate? </p>
+        <div class="buttons">
+            <button id="details" onclick="internProjectDetails()">Fee Details</button>
+            <button id="stub" onclick="getTransactionIDs()">Stub</button> <br>
+            <button id="fd-download" style="display: none;" onclick="feeDetailsDownload()"></button>
+        </div>
+    </div>
+
+    <div class="fee-details-box-print" id="table-display-print"></div>
+    <div class="tids" style="display: none;"></div>
+    <div class="stub-box-print" id="stub-display-print" style="display: none;"></div>
+    <div class="buttons" id="bottom-button"><button id="fd-download" style="display: none;"
+            onclick="feeDetailsDownload()"></button></div>
+</body>
+
+<script src="index.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+
+</html>
