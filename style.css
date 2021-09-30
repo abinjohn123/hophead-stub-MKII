@@ -88,6 +88,10 @@ button {
                  -15px -10px 50px #24303c;
 }
 
+.fee-content {
+    width: 100%;
+}
+
 
 
 th {
@@ -98,12 +102,10 @@ th {
     /* padding: 0.7em; */
 }
 .row-item {
-    width: 500px;
     padding: 1.2em;
     border: none;
-    /* border-left: solid 3px #1b232b; */
+    width: 320px;
     border-bottom: 1px solid #1b232b;
-    /* min-width:fit-content; */
 }
 .row-value {
     padding: 0.7em;
@@ -160,21 +162,15 @@ hr {
 } */
 
 .header-value {
-    /* background-color: #1b232b ; */
-    /* border-top-right-radius: 15px;
-    border-top-left-radius: 15px; */
     padding: 0.7em;
     border-radius: 19px;
     background: linear-gradient(90deg, #1b232b, #1b242c);
     box-shadow: -2px 2px 12px #161c22, 2px 2px 8px #1b232b;
 }
 .stub-box-print {
-    /* border: solid 1px; */
+
     text-align: center;
-    /* width: 29cm; */
-    /* margin: 0 auto; */
-    /* background: linear-gradient(90deg, #182027, #161c22); */
-    /* box-shadow: -2px 2px 4px #161c22, 2px 2px 8px #1b232b; */
+
 }
 
 #TID-table {

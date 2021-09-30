@@ -229,10 +229,29 @@ function feeDetailsGenerator(tableContent, num) {   //Generate table for display
         if (typeof data === "string") {
             console.log("Theader: " + data + " " + month + " " + year);
             // table += `<thead><tr><th>Name: ${data}</th><th>Details for: ${month} ${year}</th></tr><tr><th>Project Name</th><th  colspan=2>Fee</th></tr></thead>`;
-            table += `<thead><tr><th class="header-value"><table><thead><tr><th>Name: ${data}</th><th>Details for: ${month} ${year}</th></tr><tr><th colspan=3 style="padding: 0;"><hr></th></tr><tr><th>Project Name</th><th colspan=1>Fee</th></tr></thead></table></th></tr></thead> <tbody><tr><td style="border: none;"><table class="fee-content">`
+            table += `
+            <thead>
+                <tr>
+                    <th class="header-value">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Name: ${data}</th>
+                                    <th>Details for: ${month} ${year}</th>
+                                </tr>
+                                <tr>
+                                    <th colspan=3 style="padding: 0;"><hr></th>
+                                </tr>
+                                <tr>
+                                    <th>Project Name</th>
+                                    <th colspan=1>Fee</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </th></tr></thead> <tbody><tr><td style="border: none;"><table class="fee-content">`
             // table += '<tr><th colspan=3 style="padding: 0;"><hr></th></tr>'
         } else {
-            table += `<tr> <td class = "row-item">${data.Project}</td> <td  class = "row-value" colspan=1 style="text-align: center;">${data.Fee}</td> </tr>`;
+            table += `<tr> <td class = "row-item">${data.Project}</td> <td  class = "row-value" colspan=1">${data.Fee}</td> </tr>`;
             total += parseInt(data.Fee);
         }
     })
@@ -260,7 +279,7 @@ function stubGenerator(tableContent, num) { //Generate table for displaying stub
         <tr>
             <td class="hh-details" colspan="2" style="vertical-align: top;">
                 <h4>Hophead Media</h4>Building No: 109/3 <br> Poothole - Aranattukara Road <br> Thrissur | 680004 <br>
-                <img id="email-icon" src="/Assets/Images/email.png" alt="email-icon">business@hophead.in
+                <img id="email-icon" src="Assets/Images/email.png" alt="email-icon">business@hophead.in
             </td>
             <td class="payment-details">
                 <h4>PAYMENT DETAILS: </h4>
