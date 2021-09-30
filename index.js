@@ -260,7 +260,7 @@ function stubGenerator(tableContent, num) { //Generate table for displaying stub
         <tr>
             <td class="hh-details" colspan="2" style="vertical-align: top;">
                 <h4>Hophead Media</h4>Building No: 109/3 <br> Poothole - Aranattukara Road <br> Thrissur | 680004 <br>
-                <img id="email-icon" src="/Assets/Images/email.png" alt="email-icon">business@hophead.in
+                <img id="email-icon" src="Assets/Images/email.png" alt="email-icon">business@hophead.in
             </td>
             <td class="payment-details">
                 <h4>PAYMENT DETAILS: </h4>
