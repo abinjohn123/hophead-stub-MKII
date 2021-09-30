@@ -248,7 +248,7 @@ function stubGenerator(tableContent, num) { //Generate table for displaying stub
     <thead>
         <tr>
             <td style="width: 100px;">
-                <img id="hophead-logo" src="/Assets/Images/Logo.png" alt="logo-in-full-glory">
+                <img id="hophead-logo" src="Assets/Images/Logo.png" alt="logo-in-full-glory">
             </td>
             <td class="pay-stub-heading">
                 PAY STUB
